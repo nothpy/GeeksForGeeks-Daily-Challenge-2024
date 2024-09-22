@@ -1,0 +1,27 @@
+int lps(string str)
+{
+        
+      int lp[str.size()]={0};
+	    int i=1, j=0;
+	    while(i<str.size())
+	    {
+	        if(str[i]==str[j])
+	        {
+	            lp[i]=j+1;
+	            i++;
+	            j++;
+	        }
+	        else
+	        {
+	            if(j!=0)
+	            {
+	                j=lp[j-1];
+	            }
+	            else
+              {
+	                i++;
+	            }
+	        }
+	    }
+	  return lp[str.size()-1];
+}
