@@ -1,0 +1,11 @@
+vector<int> mergeNsort(vector<int>& a, vector<int>& b)
+    {
+        set<int> s;
+        // Insert all elements from both arrays into the set
+        s.insert(a.begin(), a.end());
+        s.insert(b.begin(), b.end());
+    
+        // Create a vector from the set (set elements are already sorted)
+        vector<int> result(s.begin(), s.end());
+        return result;
+    }
